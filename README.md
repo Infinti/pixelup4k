@@ -6,9 +6,14 @@ keeps the tone stable, can optionally raise the frame rate with RIFE, and carrie
 
 [Türkçe README](README.tr.md)
 
-![Sliding comparison: 1.2 Mbps source (left) and result (right), 4K crop](docs/demo_kayar.webp)
+![Sliding comparison, zoomed: 1.2 Mbps source (left) and result (right)](docs/demo_kayar.webp)
 
-*Tears of Steel, deliberately degraded to 1.2 Mbps, processed with the default film settings. Left of the line: source, right: result. 4K crop, scaled to 960 px.*
+*Tears of Steel, deliberately degraded to 1.2 Mbps and processed with the default film settings. Left of the line: source (scaled to 4K with lanczos), right: result.
+A 640x267 region of the 4K output, enlarged 1.5×, so the difference is visible at README size; at full-frame size it is subtler.*
+
+![Slow motion, native 4K pixels: source (left) and result (right)](docs/demo_agir_cekim.webp)
+
+*Same clip, a moving face at ¼ speed, native 4K pixels (960x540 region): the source's blocks crawl as the head turns; the result keeps cleaner edges on the glasses and face.*
 
 > **What to expect, honestly.** On average the result looks clearly cleaner and sharper (VMAF +6.5).
 > It does **not** bring the picture closer to the original: VMAF NEG and PSNR, which do not reward sharpening, stay flat or drop slightly.

@@ -51,12 +51,14 @@ py -3.14 yerel\karsilastir.py @ortak --anlar 8   --kirp 200:900:480:270   --ad d
 ```
 → `cikti\karsilastirma\docs_*\t*_DETAY_yan.png`
 
-## 5. Sliding comparison (WebP) / Kayar karşılaştırma (WebP)
+## 5. Zoomed sliding comparison and slow motion (WebP) / Yakınlaştırılmış kayar karşılaştırma ve ağır çekim (WebP)
 ```powershell
-py -3.14 yerel\karsilastir.py .\klipler\tos_bozuk_1200k.mp4 .\cikti\tos_deblock1.mkv --mod kayar --kirp 1700:250:1280:534 `
-    --anlar 1 --sol-ad "1.2 Mbps source" --adlar "Result" --ad docs_kayar
-.\tools\ffmpeg\bin\ffmpeg.exe -i .\cikti\karsilastirma\docs_kayar\kayar_tos_deblock1.mkv -vf "fps=24,scale=960:-2:flags=lanczos" `
-    -c:v libwebp -lossless 0 -quality 80 -compression_level 6 -loop 0 -an .\docs\demo_kayar.webp
+py -3.14 docs\webp_uret.py .\klipler\tos_bozuk_1200k.mp4 .\cikti\tos_deblock1.mkv .\docs
 ```
-A GIF of the same clip was 15 MB at 960 px (7,99 MB at 800 px / 10 fps with visible banding), so WebP (3,8 MB, 24 fps) is used.
-Aynı klibin GIF'i 960 px'te 15 MB (800 px / 10 fps'te 7,99 MB, belirgin bantlanma) olduğu için WebP (3,8 MB, 24 fps) kullanıldı.
+- `demo_kayar.webp`: frames 9–80 (robot arm), 4K region 640x267 at (1205, 440), enlarged 1.5× to 960x400, slider one full sweep in 3 s.
+  Kareler 9–80 (robot kolu), 4K'da (1205, 440) konumunda 640x267 bölge, 1,5 kat büyütülüp 960x400; çizgi 3 sn'de bir tam tur.
+- `demo_agir_cekim.webp`: frames 180–209 (head turning), 4K region 960x540 at (2050, 150), native pixels, ¼ speed (5 s).
+  Kareler 180–209 (baş dönüyor), 4K'da (2050, 150) konumunda 960x540 bölge, pikseller olduğu gibi, ¼ hız (5 sn).
+
+WebP is used instead of GIF: a 960 px GIF of a full-frame version was 15 MB (7.99 MB at 800 px / 10 fps, with visible banding).
+GIF yerine WebP: tam kare bir sürümün 960 px GIF'i 15 MB'tı (800 px / 10 fps'te 7,99 MB, belirgin bantlanma).

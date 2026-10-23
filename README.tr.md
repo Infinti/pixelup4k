@@ -6,9 +6,14 @@ Tonu sabit tutar, isteğe bağlı olarak RIFE ile kare hızını artırır ve b�
 
 [English README](README.md)
 
-![Kayar karşılaştırma: 1,2 Mbps kaynak (sol) ve sonuç (sağ), 4K kırpım](docs/demo_kayar.webp)
+![Yakınlaştırılmış kayar karşılaştırma: 1,2 Mbps kaynak (sol) ve sonuç (sağ)](docs/demo_kayar.webp)
 
-*Tears of Steel, bilerek 1,2 Mbps'e bozuldu ve varsayılan film ayarlarıyla işlendi. Çizginin solu kaynak, sağı sonuç. 4K kırpım, 960 px'e küçültüldü.*
+*Tears of Steel, bilerek 1,2 Mbps'e bozuldu ve varsayılan film ayarlarıyla işlendi. Çizginin solu kaynak (lanczos ile 4K'ya büyütülmüş), sağı sonuç.
+4K çıktıdan 640x267'lik bir bölge 1,5 kat büyütüldü; böylece fark README boyutunda görülebiliyor. Tam karede fark daha incedir.*
+
+![Ağır çekim, 4K pikselleri olduğu gibi: kaynak (sol) ve sonuç (sağ)](docs/demo_agir_cekim.webp)
+
+*Aynı klip, ¼ hızda hareket eden bir yüz, 4K pikselleri olduğu gibi (960x540'lık bölge): baş dönerken kaynaktaki bloklar kayıyor; sonuçta gözlük ve yüz kenarları daha temiz kalıyor.*
 
 > **Dürüst beklenti.** Ortalamada sonuç belirgin şekilde daha temiz ve keskin görünür (VMAF +6,5).
 > Ama görüntüyü orijinaline **yaklaştırmaz**: keskinleştirmeyi ödüllendirmeyen VMAF NEG ve PSNR yerinde sayar ya da biraz düşer.
