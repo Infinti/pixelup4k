@@ -1,0 +1,25 @@
+# Araçlar ve modeller kurulum.ps1 ile indirilir; repoya hiçbir binary / model girmez
+tools/
+models/
+*.engine
+*.engine.cache
+*.onnx
+*.pth
+*.7z
+*.7z.0*
+
+# Çalışma klasörleri: çıktılar, ara dosyalar, test klipleri
+cikti/
+klipler/
+_ara/
+
+# Demo videoları (yalnız docs/ altındaki küçük görseller repoda)
+demo/
+*.mkv
+*.mp4
+*.mov
+*.vob
+
+# Python
+__pycache__/
+*.pyc
